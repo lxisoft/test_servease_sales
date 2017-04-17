@@ -14,7 +14,7 @@ public class SaleController {
 	}
 	
 	
-	public String addSoldPrice(String add){
+	public String addSoldPrice(String var){
 		
 		return "i have implemented addSoldPrice";//show total price when press '+' 
 		
