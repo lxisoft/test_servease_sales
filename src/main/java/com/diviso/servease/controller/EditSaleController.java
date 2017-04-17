@@ -12,6 +12,13 @@ public class EditSaleController {
 		
 		return "implemented edit sale";
 	 }
+	 
+	 @RequestMapping("/refund")
+	 public String saveData()
+	 {
+		
+		return "implemented refund";
+	 }
 
 	
 }
