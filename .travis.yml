@@ -1,27 +1,25 @@
-
 language: java
 sudo: false
 cache:
   directories:
-    - $HOME/.m2
+  - "$HOME/.m2"
 env:
   global:
-    - MAVEN_OPTS="-XX:MaxPermSize=256m -Xmx512m"
-    - JAVA_OPTS="-XX:MaxPermSize=256m -Xmx512m"
+  - MAVEN_OPTS="-XX:MaxPermSize=256m -Xmx512m"
+  - JAVA_OPTS="-XX:MaxPermSize=256m -Xmx512m"
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 services:
-  - mysql
-
-script:
-  mvn install 
- 
-
-
+- mysql
+script: mvn install
 before_install:
-    - mysql -e 'CREATE DATABASE mysql_db;'
-
-
- 
-   
+- mysql -e 'CREATE DATABASE mysql_db;'
+deploy:
+  provider: openshift
+  user: abhilash14300@hotmail.com
+  password:
+    secure: nA3JLx1b1Ji7+D74ElC6/OyqWSR535gIOmeubebwmQCGJOaoQC34f2LsdlqLs7SNV9yJAmp1r5F1fy7/mW4J4Aj+1I6LvMR23of+9FmMmuSJv/dUl6REZluCv2SU512sNsxnd6CG5gCN3NxghJzemoyJezQSeNUkXJFU/aNTvxNOFHvWfrQsoIrmt2kaPtvdDAUk+Hfb+DQm7/OwJIDAvDC21yr3vtCquyt5kCfMikWc25blTYBjtC3zr8Z8rfaAvH68xFu60fQJidGtaW6O7RIgeUPjkN2vDOibuaXWKTXdap00p8sY5Pa0mPPOQryYJCVmIXLncS7qMQmJm66/goBE3KLHaRDNeUrRUJ0coVzxW5wRxIjxh9KIfrRwp++cB3z6ZGkPemXS0//girNcPFfT45HdLDCU8145sXTcpsKCYMnAh6vZrhSXqcnTgH6tMJ9V5WeUpKkp2QsiQJeCse2Gd8fSJfrgTyr1N1MUzlFlnxn7QxUfcEdRPBKOsb6iR4rVM2u1dZE1/W+iliTu9WH1bRFAESfS29tFcrcIejQ9QDMRTR2Iy9iaeUi5TeSUknNh7kxtfsn0iMqzeqPZ/8oB2C9l273nzoIf6QnZCVjw6XJPidSYwwnwP7k4qFArntrKVc1i0KlNCq8slpNKm1ZvJE70oFg5gBmJZ5ifA0s=
+  app: runapp
+  domain: diviso
+  on:
+    repo: lxisoft/test_servease_sales
