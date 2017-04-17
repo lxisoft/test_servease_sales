@@ -14,14 +14,14 @@ public class EditSaleController {
 	 }
 	 
 	 @RequestMapping("/refund")
-	 public String saveData()
+	 public String saveRefund()
 	 {
 		
 		return "implemented refund";
 	 }
 
 	 @RequestMapping("/pricecalculation")
-	 public String saveData()
+	 public String savePrice()
 	 {
 		
 		return "implemented pricecalculation";
