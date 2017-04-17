@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: servease
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: sruthy
+Implementation-Vendor-Id: com.diviso
+Build-Jdk: 1.8.0_102
+Implementation-URL: http://projects.spring.io/spring-boot/servease/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
