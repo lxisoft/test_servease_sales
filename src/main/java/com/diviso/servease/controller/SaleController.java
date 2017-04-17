@@ -20,7 +20,7 @@ public class SaleController {
 		
 	}
 	
-	public String deleteItem(String del){
+	public String deleteItem(String delete){
 		
 		//reduce total price when press '-'
 		
